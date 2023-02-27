@@ -6,7 +6,7 @@
   <link href="https://chenyuhengsjtu.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenyuhengsjtu.github.io/"/>
-  <updated>2023-02-27T07:34:54.344Z</updated>
+  <updated>2023-02-27T13:57:02.613Z</updated>
   <id>https://chenyuhengsjtu.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://chenyuhengsjtu.github.io/2023/02/27/CSAPP-Bomblab/"/>
     <id>https://chenyuhengsjtu.github.io/2023/02/27/CSAPP-Bomblab/</id>
     <published>2023-02-27T06:59:26.000Z</published>
-    <updated>2023-02-27T07:34:54.344Z</updated>
+    <updated>2023-02-27T13:57:02.613Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="CSAPP-Bomblab"><a href="#CSAPP-Bomblab" class="headerlink" title="CSAPP Bomblab"></a>CSAPP Bomblab</h1><h3 id="准备："><a href="#准备：" class="headerlink" title="准备："></a>准备：</h3><ul><li>从README.md中，可知，我们可以创建一个answer.txt文件放置输出，这样就可以使用./bomb answer.txt来运行bomb，无需多次输入</li><li>使用 <code>gdb bomb</code> 启动调试</li><li>进入gdb界面后，输入 <code>run answer.txt</code> 运行</li><li>拆解第一个炸弹，加入断点 <code>b phase_1</code>,拆解后面的炸弹以此类推</li></ul><h3 id="Phase-1"><a href="#Phase-1" class="headerlink" title="Phase_1:"></a>Phase_1:</h3><ul><li>启动gdb后设置断点，然后 <code>c</code>运行至断点</li><li>在answer.txt中输入 <code>hello</code> 作为假设的输入</li><li>gdb中输入 <code>layout asm</code> 显示汇编代码</li><li><code>si</code> 单步运行（进入调用的函数）</li><li>首先进入函数 <code>string_not_equal</code></li></ul><p><img src="/2023/02/27/CSAPP-Bomblab/GitBlog\Labs\source\_posts\CSAPP-Bomblab\微信图片_20230227152842.png" alt></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="CSAPP-Bomblab"><a href="#CSAPP-Bomblab" class="headerlink" title="CSAPP Bomblab"></a>CSAPP Bomblab</h1><h3 id="准备："><a href="#准备：" class="headerlink" title="准备："></a>准备：</h3><ul><li>从README.md中，可知，我们可以创建一个answer.txt文件放置输出，这样就可以使用./bomb answer.txt来运行bomb，无需多次输入</li><li>使用 <code>gdb bomb</code> 启动调试</li><li>进入gdb界面后，输入 <code>run answer.txt</code> 运行</li><li>拆解第一个炸弹，加入断点 <code>b phase_1</code>,拆解后面的炸弹以此类推</li></ul><h3 id="Phase-1"><a href="#Phase-1" class="headerlink" title="Phase_1:"></a>Phase_1:</h3><ul><li>启动gdb后设置断点，然后 <code>c</code>运行至断点</li><li>在answer.txt中输入 <code>hello</code> 作为假设的输入</li><li>gdb中输入 <code>layout asm</code> 显示汇编代码</li><li><code>si</code> 单步运行（进入调用的函数）</li><li>首先进入函数 <code>string_not_equal</code><img src="/2023/02/27/CSAPP-Bomblab/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230227152842.png" class title="This is an example image"></li></ul>]]></content>
     
     
       

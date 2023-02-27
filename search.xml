@@ -9,6 +9,31 @@
 ]]></content>
   </entry>
   <entry>
+    <title>CSAPP_Bomblab</title>
+    <url>/2023/02/27/CSAPP-Bomblab/</url>
+    <content><![CDATA[<h1 id="CSAPP-Bomblab"><a href="#CSAPP-Bomblab" class="headerlink" title="CSAPP Bomblab"></a>CSAPP Bomblab</h1><h3 id="准备："><a href="#准备：" class="headerlink" title="准备："></a>准备：</h3><ul>
+<li>从README.md中，可知，我们可以创建一个answer.txt文件放置输出，这样就可以使用./bomb answer.txt来运行bomb，无需多次输入</li>
+<li>使用 <code>gdb bomb</code> 启动调试</li>
+<li>进入gdb界面后，输入 <code>run answer.txt</code> 运行</li>
+<li>拆解第一个炸弹，加入断点 <code>b phase_1</code>,拆解后面的炸弹以此类推</li>
+</ul>
+<h3 id="Phase-1"><a href="#Phase-1" class="headerlink" title="Phase_1:"></a>Phase_1:</h3><ul>
+<li>启动gdb后设置断点，然后 <code>c</code>运行至断点</li>
+<li>在answer.txt中输入 <code>hello</code> 作为假设的输入</li>
+<li>gdb中输入 <code>layout asm</code> 显示汇编代码</li>
+<li><code>si</code> 单步运行（进入调用的函数）</li>
+<li>首先进入函数 <code>string_not_equal</code><img src="/2023/02/27/CSAPP-Bomblab/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230227152842.png" class title="This is an example image">
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CSAPP</category>
+      </categories>
+      <tags>
+        <tag>Lab</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSAPP_DataLab</title>
     <url>/2023/02/20/CSAPP-DataLab/</url>
     <content><![CDATA[<h1 id="CSAPP-Datalab"><a href="#CSAPP-Datalab" class="headerlink" title="CSAPP Datalab"></a>CSAPP Datalab</h1><p><strong>注意可以使用的op以及op的总个数限制</strong></p>
@@ -84,31 +109,6 @@
 <li>具体细节可以看书</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/* </span><br><span class="line"> * floatPower2 - Return bit-level equivalent of the expression 2.0^x</span><br><span class="line"> *   (2.0 raised to the power x) for any 32-bit integer x.</span><br><span class="line"> *</span><br><span class="line"> *   The unsigned value that is returned should have the identical bit</span><br><span class="line"> *   representation as the single-precision floating-point number 2.0^x.</span><br><span class="line"> *   If the result is too small to be represented as a denorm, return</span><br><span class="line"> *   0. If too large, return +INF.</span><br><span class="line"> * </span><br><span class="line"> *   Legal ops: Any integer/unsigned operations incl. ||, &amp;&amp;. Also if, while </span><br><span class="line"> *   Max ops: 30 </span><br><span class="line"> *   Rating: 4</span><br><span class="line"> */</span><br><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">unsigned floatPower2(int x) &#123;</span><br><span class="line">  int exp;</span><br><span class="line">  int frac;</span><br><span class="line">  int s = 0;</span><br><span class="line">  int res = 0;</span><br><span class="line"></span><br><span class="line">  if(x &gt;= 128)&#123;</span><br><span class="line">    exp = 0xff;</span><br><span class="line">    frac = 0;</span><br><span class="line">    s = 0;</span><br><span class="line">  &#125;</span><br><span class="line">  else if(x &lt; -126 - 23)&#123;</span><br><span class="line">    frac = 0;</span><br><span class="line">    exp = 0;</span><br><span class="line">  &#125;</span><br><span class="line">  else if(x &gt;= -126 - 23 &amp;&amp; x &lt;= -127)&#123;</span><br><span class="line">    exp = 0;</span><br><span class="line">    frac = 1 &lt;&lt; (x - (-126 - 23));</span><br><span class="line">  &#125;</span><br><span class="line">  else &#123;</span><br><span class="line">    frac = 0;</span><br><span class="line">    exp = 127 + x;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  res = (exp &lt;&lt; 23) | (frac) | (s &lt;&lt; 31);</span><br><span class="line"></span><br><span class="line">  return res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>CSAPP</category>
-      </categories>
-      <tags>
-        <tag>Lab</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSAPP_Bomblab</title>
-    <url>/2023/02/27/CSAPP-Bomblab/</url>
-    <content><![CDATA[<h1 id="CSAPP-Bomblab"><a href="#CSAPP-Bomblab" class="headerlink" title="CSAPP Bomblab"></a>CSAPP Bomblab</h1><h3 id="准备："><a href="#准备：" class="headerlink" title="准备："></a>准备：</h3><ul>
-<li>从README.md中，可知，我们可以创建一个answer.txt文件放置输出，这样就可以使用./bomb answer.txt来运行bomb，无需多次输入</li>
-<li>使用 <code>gdb bomb</code> 启动调试</li>
-<li>进入gdb界面后，输入 <code>run answer.txt</code> 运行</li>
-<li>拆解第一个炸弹，加入断点 <code>b phase_1</code>,拆解后面的炸弹以此类推</li>
-</ul>
-<h3 id="Phase-1"><a href="#Phase-1" class="headerlink" title="Phase_1:"></a>Phase_1:</h3><ul>
-<li>启动gdb后设置断点，然后 <code>c</code>运行至断点</li>
-<li>在answer.txt中输入 <code>hello</code> 作为假设的输入</li>
-<li>gdb中输入 <code>layout asm</code> 显示汇编代码</li>
-<li><code>si</code> 单步运行（进入调用的函数）</li>
-<li>首先进入函数 <code>string_not_equal</code></li>
-</ul>
-<p><img src="/2023/02/27/CSAPP-Bomblab/GitBlog\Labs\source\_posts\CSAPP-Bomblab\微信图片_20230227152842.png" alt></p>
 ]]></content>
       <categories>
         <category>CSAPP</category>

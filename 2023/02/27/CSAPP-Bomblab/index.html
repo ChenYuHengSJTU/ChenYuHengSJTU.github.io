@@ -27,13 +27,13 @@
 <meta property="og:site_name" content="Yuheng Chen Blog">
 <meta property="og:description" content="CSAPP Bomblab准备： 从README.md中，可知，我们可以创建一个answer.txt文件放置输出，这样就可以使用.&#x2F;bomb answer.txt来运行bomb，无需多次输入 使用 gdb bomb 启动调试 进入gdb界面后，输入 run answer.txt 运行 拆解第一个炸弹，加入断点 b phase_1,拆解后面的炸弹以此类推  Phase_1: 启动gdb后设置断点，然">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://chenyuhengsjtu.github.io/2023/02/27/CSAPP-Bomblab/GitBlog/Labs/source/_posts/CSAPP-Bomblab/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230227152842.png">
+<meta property="og:image" content="https://chenyuhengsjtu.github.io/2023/02/27/CSAPP-Bomblab/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230227152842.png">
 <meta property="article:published_time" content="2023-02-27T06:59:26.000Z">
-<meta property="article:modified_time" content="2023-02-27T07:34:54.344Z">
+<meta property="article:modified_time" content="2023-02-27T13:57:02.613Z">
 <meta property="article:author" content="ChenYuHeng">
 <meta property="article:tag" content="Lab">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://chenyuhengsjtu.github.io/2023/02/27/CSAPP-Bomblab/GitBlog/Labs/source/_posts/CSAPP-Bomblab/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230227152842.png">
+<meta name="twitter:image" content="https://chenyuhengsjtu.github.io/2023/02/27/CSAPP-Bomblab/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230227152842.png">
 
 <link rel="canonical" href="https://chenyuhengsjtu.github.io/2023/02/27/CSAPP-Bomblab/">
 
@@ -192,7 +192,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2023-02-27 14:59:26 / Modified: 15:34:54" itemprop="dateCreated datePublished" datetime="2023-02-27T14:59:26+08:00">2023-02-27</time>
+              <time title="Created: 2023-02-27 14:59:26 / Modified: 21:57:02" itemprop="dateCreated datePublished" datetime="2023-02-27T14:59:26+08:00">2023-02-27</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -240,9 +240,9 @@
 <li>在answer.txt中输入 <code>hello</code> 作为假设的输入</li>
 <li>gdb中输入 <code>layout asm</code> 显示汇编代码</li>
 <li><code>si</code> 单步运行（进入调用的函数）</li>
-<li>首先进入函数 <code>string_not_equal</code></li>
+<li>首先进入函数 <code>string_not_equal</code><img src="/2023/02/27/CSAPP-Bomblab/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230227152842.png" class title="This is an example image">
+</li>
 </ul>
-<p><img src="/2023/02/27/CSAPP-Bomblab/GitBlog\Labs\source\_posts\CSAPP-Bomblab\微信图片_20230227152842.png" alt></p>
 
     </div>
 
