@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2023/02/20/CSAPP-DataLab/</loc>
+    <loc>https://chenyuhengsjtu.github.io/2023/02/20/CSAPP-DataLab/</loc>
     
     <lastmod>2023-02-27</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/02/20/hello-world/</loc>
+    <loc>https://chenyuhengsjtu.github.io/2023/02/20/hello-world/</loc>
     
     <lastmod>2023-02-23</lastmod>
     
@@ -21,7 +21,7 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
+    <loc>https://chenyuhengsjtu.github.io/</loc>
     <lastmod>2023-02-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>

@@ -3,11 +3,11 @@
   <title>Yuheng Chen Blog</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://chenyuhengsjtu.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://chenyuhengsjtu.github.io/"/>
   <updated>2023-02-27T05:27:43.934Z</updated>
-  <id>http://example.com/</id>
+  <id>https://chenyuhengsjtu.github.io/</id>
   
   <author>
     <name>ChenYuHeng</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>CSAPP_DataLab</title>
-    <link href="http://example.com/2023/02/20/CSAPP-DataLab/"/>
-    <id>http://example.com/2023/02/20/CSAPP-DataLab/</id>
+    <link href="https://chenyuhengsjtu.github.io/2023/02/20/CSAPP-DataLab/"/>
+    <id>https://chenyuhengsjtu.github.io/2023/02/20/CSAPP-DataLab/</id>
     <published>2023-02-20T11:42:22.000Z</published>
     <updated>2023-02-27T05:27:43.934Z</updated>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2023/02/20/hello-world/"/>
-    <id>http://example.com/2023/02/20/hello-world/</id>
+    <link href="https://chenyuhengsjtu.github.io/2023/02/20/hello-world/"/>
+    <id>https://chenyuhengsjtu.github.io/2023/02/20/hello-world/</id>
     <published>2023-02-20T11:33:21.042Z</published>
     <updated>2023-02-23T15:48:34.758Z</updated>
     
