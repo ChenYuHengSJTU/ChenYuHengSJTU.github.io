@@ -66,12 +66,12 @@
   
   <entry>
     <title>About Myself</title>
-    <link href="https://chenyuhengsjtu.github.io/2023/02/20/About%20Myself/"/>
-    <id>https://chenyuhengsjtu.github.io/2023/02/20/About%20Myself/</id>
+    <link href="https://chenyuhengsjtu.github.io/index.html"/>
+    <id>https://chenyuhengsjtu.github.io/index.html</id>
     <published>2023-02-20T11:33:21.042Z</published>
-    <updated>2023-02-27T05:45:03.402Z</updated>
+    <updated>2023-03-01T08:02:59.303Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to MyBlog!</p><p>Wish my blog be of some help to you.</p><p>Have a nice journey!</p>]]></content>
+    <content type="html"><![CDATA[<p>Welcome to MyBlog!</p><p>Wish my blog be of some help to you.</p><p>Have a nice journey!</p><img src="/index/SJTUlogo1.png" class title="This is an example image">]]></content>
     
     
       
@@ -79,7 +79,7 @@
     <summary type="html">&lt;p&gt;Welcome to MyBlog!&lt;/p&gt;
 &lt;p&gt;Wish my blog be of some help to you.&lt;/p&gt;
 &lt;p&gt;Have a nice journey!&lt;/p&gt;
-</summary>
+&lt;img src=&quot;/index/SJTUlogo1.png&quot; class titl</summary>
       
     
     
