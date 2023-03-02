@@ -6,7 +6,7 @@
   <link href="https://chenyuhengsjtu.github.io/atom.xml" rel="self"/>
   
   <link href="https://chenyuhengsjtu.github.io/"/>
-  <updated>2023-03-01T08:43:32.991Z</updated>
+  <updated>2023-03-01T14:40:47.498Z</updated>
   <id>https://chenyuhengsjtu.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSAPP_AttackLab</title>
+    <link href="https://chenyuhengsjtu.github.io/2023/03/01/CSAPP-AttackLab/"/>
+    <id>https://chenyuhengsjtu.github.io/2023/03/01/CSAPP-AttackLab/</id>
+    <published>2023-03-01T11:52:18.000Z</published>
+    <updated>2023-03-01T14:40:47.498Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="CSAPP-Attacklab"><a href="#CSAPP-Attacklab" class="headerlink" title="CSAPP Attacklab"></a>CSAPP Attacklab</h1><p><strong>代码参考:<a href="https://github.com/ChenYuHengSJTU/CSAPP_Labs/tree/main/target1">CSAPP_Labs/target1 at main · ChenYuHengSJTU/CSAPP_Labs (github.com)</a></strong></p><span id="more"></span><h3 id="一些准备工作"><a href="#一些准备工作" class="headerlink" title="一些准备工作"></a>一些准备工作</h3><ul><li>实验Writeup的附录中有很多有用的东西，包括书写简单的汇编代码，将汇编编译为字节码，然后在反汇编得到汇编指令的字节表示。</li><li>使用 <code>objdump -d ctarget &gt; ctarget.txt</code>将ctarget反汇编</li></ul><h2 id="Part-I-Code-Injection-Attacks"><a href="#Part-I-Code-Injection-Attacks" class="headerlink" title="Part I: Code Injection Attacks"></a>Part I: Code Injection Attacks</h2><h3 id="Level-1"><a href="#Level-1" class="headerlink" title="Level 1"></a>Level 1</h3><ul><li><p>根据writeup的提示，需要利用getbuf中字符数组无边界检查的特性，将touch1的地址塞进栈中，让getbuf从栈中弹出地址时，弹出的是touch1的地址</p></li><li><p>上汇编代码</p><img src="/2023/03/01/CSAPP-AttackLab/image-20230301200029288.png" class title="This is an example image"></li><li><p>可以得到touch1地址：<code>0x4017c0</code></p></li><li><p>由汇编代码，getbuf将读入的字符串存放在栈中，预设的字符串最大长度为 <code>0x20 = 40 bytes</code>！！！</p></li><li><p>所以我们需要输入至少长度为48bytes的字符串，其中，41 - 48的子串为touch1的地址</p></li><li><p>得到答案：</p><img src="/2023/03/01/CSAPP-AttackLab/image-20230301200620547.png" class title="This is an example image"><img src="/2023/03/01/CSAPP-AttackLab/image-20230301200735291.png" class title="This is an example image"></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;CSAPP-Attacklab&quot;&gt;&lt;a href=&quot;#CSAPP-Attacklab&quot; class=&quot;headerlink&quot; title=&quot;CSAPP Attacklab&quot;&gt;&lt;/a&gt;CSAPP Attacklab&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;代码参考:&lt;a href=&quot;https://github.com/ChenYuHengSJTU/CSAPP_Labs/tree/main/target1&quot;&gt;CSAPP_Labs/target1 at main · ChenYuHengSJTU/CSAPP_Labs (github.com)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="CSAPP" scheme="https://chenyuhengsjtu.github.io/categories/CSAPP/"/>
+    
+    
+    <category term="Lab" scheme="https://chenyuhengsjtu.github.io/tags/Lab/"/>
+    
+  </entry>
   
   <entry>
     <title>CSAPP_Bomblab</title>
