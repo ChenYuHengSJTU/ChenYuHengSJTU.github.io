@@ -20,17 +20,20 @@
     var CONFIG = {"hostname":"chenyuhengsjtu.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":5,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Home">
-<meta property="og:url" content="https://chenyuhengsjtu.github.io/Home/index.html">
+  <meta name="description" content="谨以此贴，记录环境搭建过程中被Ubuntu22.04坑惨的经历…一定要用Ubuntu20.04，否则在编译Qemu时会有一个神奇的包找不到发布源">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MITOS_Lab00">
+<meta property="og:url" content="https://chenyuhengsjtu.github.io/2023/03/07/MITOS-Lab00/index.html">
 <meta property="og:site_name" content="Yuheng Chen Blog">
+<meta property="og:description" content="谨以此贴，记录环境搭建过程中被Ubuntu22.04坑惨的经历…一定要用Ubuntu20.04，否则在编译Qemu时会有一个神奇的包找不到发布源">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-03-01T08:33:36.000Z">
-<meta property="article:modified_time" content="2023-03-01T08:34:11.463Z">
+<meta property="article:published_time" content="2023-03-07T03:48:58.000Z">
+<meta property="article:modified_time" content="2023-03-07T03:55:49.157Z">
 <meta property="article:author" content="ChenYuHeng">
+<meta property="article:tag" content="Lab">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://chenyuhengsjtu.github.io/Home/">
+<link rel="canonical" href="https://chenyuhengsjtu.github.io/2023/03/07/MITOS-Lab00/">
 
 
 <script id="page-configurations">
@@ -38,13 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Home | Yuheng Chen Blog
-</title>
+  <title>MITOS_Lab00 | Yuheng Chen Blog</title>
   
 
 
@@ -156,43 +158,108 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="en">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://chenyuhengsjtu.github.io/2023/03/07/MITOS-Lab00/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Irving1.jpg">
+      <meta itemprop="name" content="ChenYuHeng">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yuheng Chen Blog">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          MITOS_Lab00
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">Home
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
 
-<div class="post-meta">
+              <time title="Created: 2023-03-07 11:48:58 / Modified: 11:55:49" itemprop="dateCreated datePublished" datetime="2023-03-07T11:48:58+08:00">2023-03-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MITOS/" itemprop="url" rel="index"><span itemprop="name">MITOS</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>72</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="谨以此贴，记录环境搭建过程中被Ubuntu22-04坑惨的经历…一定要用Ubuntu20-04，否则在编译Qemu时会有一个神奇的包找不到发布源"><a href="#谨以此贴，记录环境搭建过程中被Ubuntu22-04坑惨的经历…一定要用Ubuntu20-04，否则在编译Qemu时会有一个神奇的包找不到发布源" class="headerlink" title="谨以此贴，记录环境搭建过程中被Ubuntu22.04坑惨的经历…一定要用Ubuntu20.04，否则在编译Qemu时会有一个神奇的包找不到发布源"></a>谨以此贴，记录环境搭建过程中被Ubuntu22.04坑惨的经历…一定要用Ubuntu20.04，否则在编译Qemu时会有一个神奇的包找不到发布源</h1>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Lab/" rel="tag"># Lab</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/03/01/CSAPP-AttackLab/" rel="prev" title="CSAPP_AttackLab">
+      <i class="fa fa-chevron-left"></i> CSAPP_AttackLab
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/03/07/MITOS-Lab01/" rel="next" title="MITOS_Lab01">
+      MITOS_Lab01 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
@@ -243,6 +310,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B0%A8%E4%BB%A5%E6%AD%A4%E8%B4%B4%EF%BC%8C%E8%AE%B0%E5%BD%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%A2%ABUbuntu22-04%E5%9D%91%E6%83%A8%E7%9A%84%E7%BB%8F%E5%8E%86%E2%80%A6%E4%B8%80%E5%AE%9A%E8%A6%81%E7%94%A8Ubuntu20-04%EF%BC%8C%E5%90%A6%E5%88%99%E5%9C%A8%E7%BC%96%E8%AF%91Qemu%E6%97%B6%E4%BC%9A%E6%9C%89%E4%B8%80%E4%B8%AA%E7%A5%9E%E5%A5%87%E7%9A%84%E5%8C%85%E6%89%BE%E4%B8%8D%E5%88%B0%E5%8F%91%E5%B8%83%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text">谨以此贴，记录环境搭建过程中被Ubuntu22.04坑惨的经历…一定要用Ubuntu20.04，否则在编译Qemu时会有一个神奇的包找不到发布源</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

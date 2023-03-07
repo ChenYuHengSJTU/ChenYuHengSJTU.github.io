@@ -2,6 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chenyuhengsjtu.github.io/2023/03/07/MITOS-Lab02/</loc>
+    
+    <lastmod>2023-03-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenyuhengsjtu.github.io/2023/03/07/MITOS-Lab01/</loc>
+    
+    <lastmod>2023-03-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenyuhengsjtu.github.io/2023/03/07/MITOS-Lab00/</loc>
+    
+    <lastmod>2023-03-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenyuhengsjtu.github.io/categories/index.html</loc>
+    
+    <lastmod>2023-03-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://chenyuhengsjtu.github.io/2023/03/01/CSAPP-AttackLab/</loc>
     
     <lastmod>2023-03-05</lastmod>
@@ -91,19 +127,10 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://chenyuhengsjtu.github.io/categories/index.html</loc>
-    
-    <lastmod>2023-02-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://chenyuhengsjtu.github.io/</loc>
-    <lastmod>2023-03-05</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -111,7 +138,7 @@
   
   <url>
     <loc>https://chenyuhengsjtu.github.io/tags/Lab/</loc>
-    <lastmod>2023-03-05</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -120,7 +147,14 @@
   
   <url>
     <loc>https://chenyuhengsjtu.github.io/categories/CSAPP/</loc>
-    <lastmod>2023-03-05</lastmod>
+    <lastmod>2023-03-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenyuhengsjtu.github.io/categories/MITOS/</loc>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
