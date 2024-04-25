@@ -24,15 +24,15 @@ author:
   avatar           : "avatar.png"
   name             : "Yuheng Chen"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "Junior student at Shanghai Jiao Tong University"
   location         : "Shanghai China"
-  employer         : "Shanghai Jiao Tong University"
+  employer         : "Shanghai Jiao Tong Univ."
   uri              : # URL
   email            : "cyh627@sjtu.edu.cn" 
 
   # Academic websites
-  arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : ""
+  arxiv            : YuhengChen # URL - Update with the correct link to your profile
+  # googlescholar    : YuhengChen
   impactstory      : # URL
   # orcid            : "http://orcid.org/yourorcidurl"
   # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
