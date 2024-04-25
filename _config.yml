@@ -21,12 +21,12 @@ repository               : "ChenYuHengSJTU/ChenYuHengSJTU.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  avatar           : "avatar.png"
+  name             : "Yuheng Chen"
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
   location         : "Shanghai China"
-  employer         : "Red Brick University"
+  employer         : "Shanghai Jiao Tong University"
   uri              : # URL
   email            : "cyh627@sjtu.edu.cn" 
 
