@@ -21,7 +21,7 @@ repository               : "ChenYuHengSJTU/ChenYuHengSJTU.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "avatar.jpeg"
+  avatar           : "avatar.png"
   name             : "Yuheng Chen"
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
