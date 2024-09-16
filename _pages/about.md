@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Yuheng Chen(陈昱衡) is currently a senior student majoring in Computer Science and Technology in the [School of Electronic Information and Electrical Engineering](https://english.seiee.sjtu.edu.cn/english/index.htm) at Shanghai Jiao Tong University, also a member of the Zhiyuan College Engineering Honors Program. Next year, he will join the [DMCV lab](https://dmcv.sjtu.edu.cn/) lead by Prof. [Lizhuang Ma](https://dmcv.sjtu.edu.cn/people/). He will then be a Phd under the guidance of Prof. [Lizhuang Ma](https://dmcv.sjtu.edu.cn/people/) and Prof. [Yi Ran](https://yiranran.github.io/).
+Yuheng Chen(陈昱衡) is currently a senior student majoring in Computer Science and Technology in the [School of Electronic Information and Electrical Engineering](https://english.seiee.sjtu.edu.cn/english/index.htm) at [Shanghai Jiao Tong University](https://en.sjtu.edu.cn/), also a member of the [Zhiyuan College](https://en.zhiyuan.sjtu.edu.cn/) Engineering Honors Program. Next year(2025), he will join the [DMCV lab](https://dmcv.sjtu.edu.cn/) lead by Prof. [Lizhuang Ma](https://dmcv.sjtu.edu.cn/people/). He will then be a Phd student under the guidance of Prof. [Lizhuang Ma](https://dmcv.sjtu.edu.cn/people/) and Prof. [Yi Ran](https://yiranran.github.io/).
 
 
 <!-- A data-driven personal website
@@ -47,4 +47,4 @@ For site content, there is one markdown file for each type of content, which are
 
 <!-- For more info -->
 <!-- ------ -->
-<!-- More info about configuring academicpages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful. --> -->
+<!-- More info about configuring academicpages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful. -->
