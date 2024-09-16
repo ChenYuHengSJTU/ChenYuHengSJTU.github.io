@@ -1,30 +1,8 @@
 ---
 layout: default
 ---
+
 {% include base_path %}
-
-<div id="main" role="main">
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    {% if page.title %}
-      <header>
-        <h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
-      </header>
-    {% endif %}
-
-    {% if page.date %}
-      <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
-    {% endif %}
-
-    {% if page.excerpt %}
-      <section class="page__excerpt" itemprop="text">
-        {{ page.excerpt | markdownify }}
-      </section>
-    {% endif %}
-
-  </article>
-</div>
-
-<!-- {% include base_path %}
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
@@ -93,10 +71,10 @@ layout: default
     {% if site.comments.provider and page.comments %}
       {% include comments.html %}
     {% endif %}
-  </article> -->
+  </article>
 
-  <!-- {% comment %}only show related on a post page when not disabled{% endcomment %} -->
-  <!-- {% if page.id and page.related and site.related_posts.size > 0 %}
+  {% comment %}<!-- only show related on a post page when not disabled -->{% endcomment %}
+  {% if page.id and page.related and site.related_posts.size > 0 %}
     <div class="page__related">
       {% if site.data.ui-text[site.locale].related_label %}
         <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
@@ -108,4 +86,4 @@ layout: default
       </div>
     </div>
   {% endif %}
-</div> -->
+</div>

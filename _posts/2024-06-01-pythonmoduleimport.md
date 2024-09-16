@@ -5,9 +5,10 @@ permalink: /posts/2024/06/pythonmoduleimport/
 tags:
   - python
   - solutions
+excerpt: ""
 ---
 
-<!--more-->
+<!-- more -->
 
 ## 模块、脚本、 包
 首先明确几个概念，脚本、模块、包
