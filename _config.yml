@@ -269,6 +269,12 @@ defaults:
       author_profile: true
       share: true
 
+  - scope:
+      path: ""
+      type: home
+    values:
+      layout: single
+      author_profile: true
 
 # Sass/SCSS
 sass:
