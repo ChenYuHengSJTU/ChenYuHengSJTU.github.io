@@ -220,7 +220,7 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: compress
       author_profile: true
       read_time: true
       comments: true
