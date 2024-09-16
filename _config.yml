@@ -23,7 +23,7 @@ author:
   # Biographic information
   avatar           : "avatar.png"
   name             : "Yuheng Chen"
-  pronouns         : "he/his" # example: "she/her"  
+  # pronouns         : "he/his" # example: "she/her"  
   bio              : "Junior student at Shanghai Jiao Tong University"
   location         : "Shanghai China"
   employer         : "Shanghai Jiao Tong Univ."
