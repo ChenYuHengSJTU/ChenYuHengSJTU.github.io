@@ -14,6 +14,11 @@ body {
   color: $text-color;
   font-family: $global-font-family;
   line-height: 1.5;
+  font-size:large;
+  // font-family:'Times New Roman', Times, serif;
+  font-family:'Merriweather', "Microsoft YaHei";
+  letter-spacing: 0.05em;
+  word-spacing: 0.1em;
 
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
@@ -74,6 +79,9 @@ del a {
   color: inherit;
 }
 
+// a {
+  // font-size: $type-size-6;
+// }
 /* reduce orphans and widows when printing */
 
 p, pre, blockquote, ul, ol, dl, figure, table, fieldset {
@@ -96,11 +104,11 @@ blockquote {
   margin: 2em 1em 2em 0;
   padding-left: 1em;
   padding-right: 1em;
-  font-style: italic;
+  // font-style: italic;
   border-left: 0.25em solid $primary-color;
 
   cite {
-    font-style: italic;
+    // font-style: italic;
 
     &:before {
       content: "\2014";
@@ -125,11 +133,14 @@ a {
 /* code */
 
 tt, code, kbd, samp, pre {
-  font-family: $monospace;
+  font-family: 'Fira Code', monospace;
+  font-size: medium;
+  line-height: 1;
 }
 
 pre {
   overflow-x: auto; /* add scrollbars to wide code blocks*/
+  line-height: 1;
 }
 
 p > code,
@@ -144,6 +155,7 @@ td > code {
   border: 1px solid $lighter-gray;
   border-radius: $border-radius;
   box-shadow: $box-shadow;
+  line-height: 1; /* 确保行间距设置一致 */
 
   &:before, &:after {
     letter-spacing: -0.2em;

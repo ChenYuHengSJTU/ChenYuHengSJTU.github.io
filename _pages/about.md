@@ -9,7 +9,19 @@ redirect_from:
 
 Yuheng Chen(陈昱衡) is currently a senior student majoring in Computer Science and Technology in the [School of Electronic Information and Electrical Engineering](https://english.seiee.sjtu.edu.cn/english/index.htm) at [Shanghai Jiao Tong University](https://en.sjtu.edu.cn/), also a member of the [Zhiyuan College](https://en.zhiyuan.sjtu.edu.cn/) Engineering Honors Program. Next year(2025), he will join the [DMCV lab](https://dmcv.sjtu.edu.cn/) lead by Prof. [Lizhuang Ma](https://dmcv.sjtu.edu.cn/people/). He will then be a Phd student under the guidance of Prof. [Lizhuang Ma](https://dmcv.sjtu.edu.cn/people/) and Prof. [Yi Ran](https://yiranran.github.io/). His research interests include computer vision, deep learning, computer graphics and embodied ai.
 
+# 📝 Selected Publications 
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2024</div><img src='/assets\publications\640.webp' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Quantum Circuit Synthesis and Compilation Optimization: Overview and Prospects](https://arxiv.org/abs/2407.00736)
+
+Yan Ge, Wu Wenjie, **Chen Yuheng**, Pan Kaisen, Lu Xudong, Zhou Zixiang, Wang Yuhan, Wang Ruocheng, Yan Junchi
+
+[**Related link**](https://mp.weixin.qq.com/s/TVHtSIk1zbwIY8gPBvfynw) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+- In this survey, we systematically review and summarize a vast body of literature, exploring the feasibility of an integrated design and optimization scheme that spans from the algorithmic level to quantum hardware, combining the steps of logic circuit design and compilation optimization.
+</div>
+</div>
 
 <!-- A data-driven personal website
 ======

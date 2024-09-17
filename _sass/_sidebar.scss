@@ -54,6 +54,10 @@
   img {
     width: 100%;
   }
+
+  // a{
+    // font-size: $type-size-6;
+  // }
 }
 
 .sidebar__right {
@@ -130,6 +134,7 @@
 
 .sidebar .author__desktop {
   display: none;
+  font-size: $type-size-6;
   @media screen and (min-width: 1024px) {
     display: block;
   }
@@ -146,6 +151,7 @@
 
 .author__bio {
   margin: 0;
+  letter-spacing: 0.03em;
 
   @include breakpoint($large) {
     margin-top: 10px;
@@ -179,6 +185,10 @@
       display: none;
     }
   }
+
+  // a {
+    // font-size: $type-size-6;
+  // }
 }
 
 .author__urls {
@@ -248,9 +258,10 @@
     margin-bottom: 5px;
     padding-right: 5px;
     padding-top: 2px;
+    // padding-left: 5px;
     padding-bottom: 2px;
     color: inherit;
-    font-size: $type-size-5;
+    font-size: $type-size-6;
     text-decoration: none;
 
     &:hover {
